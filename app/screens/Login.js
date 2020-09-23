@@ -8,6 +8,7 @@ import {
   TextInput,
   TouchableOpacity,
   Modal,
+  Platform,
 } from "react-native";
 
 const Login = () => {
