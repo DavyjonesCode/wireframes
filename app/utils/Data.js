@@ -1,5 +1,3 @@
-export default DATA;
-
 const DATA = [
   {
     id: "1",
@@ -26,3 +24,5 @@ const DATA = [
       "Scratch the box. Cat slap dog in face kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment. Pet me pet me don't pet me hiiiiiiiiii feed me now cat walks in keyboard . Damn that dog stare at the wall, play with food and",
   },
 ];
+
+export default DATA;
