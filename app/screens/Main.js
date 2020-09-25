@@ -16,25 +16,17 @@ import Box from "../componets/Box";
 
 const Main = () => {
   return (
-    <View style={{ backgroundColor: "green", flex: 1 }}>
+    <View>
       <View style={styles.viewOne}>
         <Image
           source={require("../../assets/icon.png")}
           style={{
             width: 50,
             height: 50,
-            marginVertical: 25,
           }}
         />
         <View>
-          <Image
-            source={require("../../assets/icon.png")}
-            style={{
-              width: 50,
-              height: 50,
-              alignSelf: "center",
-            }}
-          />
+          <Image source={require("../../assets/icon.png")} style={styles.img} />
         </View>
       </View>
     </View>
@@ -55,6 +47,14 @@ const styles = StyleSheet.create({
   viewOne: {
     backgroundColor: "blue",
     height: 100,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  img: {
+    backgroundColor: "tomato",
+    width: 50,
+    height: 50,
+    justifyContent: "center",
   },
 });
 
