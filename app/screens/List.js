@@ -14,7 +14,6 @@ const List = () => {
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        horizontal={useDeviceOrientation.horizontal ? "true"}
         data={DATA}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
@@ -23,8 +22,11 @@ const List = () => {
   );
 };
 
+const Orientation = useDeviceOrientation.horizontal ? "row" : "column";
+
 const styles = StyleSheet.create({
   container: {
+    flexDirection: Orientation,
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -32,3 +34,10 @@ const styles = StyleSheet.create({
 });
 
 export default List;
+
+//use flexhorisontal in the contaner view to change the layout
+// use alignitems for the container(first view) use alignself for idividual
+// alighnitmes is seccondar
+//justifycontent is primary axis
+// use align content if you are also useing wraping otherwise dont
+//setting a negative flex is the same as using flex shrink, wich makes the object shrik to fit

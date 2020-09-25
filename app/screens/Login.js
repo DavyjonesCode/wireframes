@@ -14,13 +14,14 @@ import {
 const Login = () => {
   const [modalVisable, setModalVisable] = useState(false);
   const handleToggle = () => setModalVisable(!modalVisable);
+  let ChangeScreen = "Main";
   return (
     <View style={styles.container}>
       <Image
         source={require("../../assets/icon.png")}
         style={{ width: 100, height: 100 }}
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={ChangeScreen}>
         <Text style={{ color: "#fff", fontSize: 20, fontWeight: "bold" }}>
           Sign in with apple
         </Text>
@@ -60,12 +61,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 35,
     borderRadius: 15,
-    backgroundColor: "#f00",
+    backgroundColor: "grey",
   },
   input: {
     height: 40,
     borderWidth: 2,
-    borderColor: "grey",
+    borderColor: "black",
     width: 150,
   },
 });
